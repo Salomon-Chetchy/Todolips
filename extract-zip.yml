@@ -9,7 +9,7 @@ jobs:
     permissions: { contents: write }
     steps:
       - uses: actions/checkout@v4
-      - name: Unzip Todo3DApp.zip
+      - name: Todo3DApp.zip
         run: |
           ls -la *.zip || echo "No zip at root"
           for f in *.zip; do [ -f "$f" ] && unzip -o "$f" && rm "$f"; done
